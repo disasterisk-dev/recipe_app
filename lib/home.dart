@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/components/corner_button.dart';
-import 'package:recipe_app/components/title_text.dart';
+import 'package:recipe_app/components/text_widgets.dart';
 import 'package:recipe_app/recipe_card.dart';
 
 class Home extends StatelessWidget {
@@ -9,9 +9,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const TitleText("Recipeat"),
-      ),
+      appBar: AppBar(title: const TitleText("Recipeat")),
       body: Stack(
         children: [
           Container(

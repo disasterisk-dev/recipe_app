@@ -1,0 +1,86 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:recipe_app/theme.dart';
+
+class BodyText extends StatelessWidget {
+  const BodyText(this.text, {super.key});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.openSans(
+        textStyle: TextStyle(
+          color: AppColors.bold,
+          fontSize: 16,
+          letterSpacing: 0.5,
+        ),
+      ),
+    );
+  }
+}
+
+class SubheadingText extends StatelessWidget {
+  const SubheadingText(this.text, {super.key});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.openSans(
+        textStyle: TextStyle(
+          color: AppColors.boldMuted,
+          fontWeight: FontWeight.w600,
+          fontSize: 16,
+          letterSpacing: 0.5,
+        ),
+      ),
+    );
+  }
+}
+
+class HeadingText extends StatelessWidget {
+  const HeadingText(this.text, {super.key});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.rubik(
+        textStyle: TextStyle(
+          color: AppColors.brand,
+          fontWeight: FontWeight.w800,
+          fontSize: 18,
+          letterSpacing: 1,
+        ),
+      ),
+    );
+  }
+}
+
+class TitleText extends StatelessWidget {
+  const TitleText(this.text, {super.key});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.rubik(
+        textStyle: TextStyle(
+          color: AppColors.inverse,
+          fontWeight: FontWeight.w900,
+          fontSize: 24,
+          letterSpacing: 2,
+        ),
+      ),
+    );
+  }
+}

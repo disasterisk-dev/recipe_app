@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/components/header_text.dart';
 import 'package:recipe_app/components/styled_button.dart';
+import 'package:recipe_app/components/text_widgets.dart';
 import 'package:recipe_app/theme.dart';
 
 class RecipeCard extends StatelessWidget {
@@ -45,11 +45,8 @@ class RecipeCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    HeaderText(title),
-                    Text(
-                      description,
-                      style: TextStyle(color: AppColors.boldMuted),
-                    ),
+                    HeadingText(title),
+                    SubheadingText(description),
                     const Expanded(child: SizedBox()),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
