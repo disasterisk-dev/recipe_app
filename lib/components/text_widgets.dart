@@ -84,3 +84,65 @@ class TitleText extends StatelessWidget {
     );
   }
 }
+
+class ButtonText extends StatelessWidget {
+  const ButtonText(this.text, {super.key});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.rubik(
+        textStyle: TextStyle(
+          color: AppColors.inverse,
+          fontWeight: FontWeight.w500,
+          fontSize: 16,
+          letterSpacing: 0.5,
+        ),
+      ),
+    );
+  }
+}
+
+class LinkText extends StatelessWidget {
+  const LinkText(this.text, {super.key});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.openSans(
+        textStyle: TextStyle(
+          color: AppColors.brand,
+          fontSize: 16,
+          letterSpacing: 0.5,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    );
+  }
+}
+
+class ErrorText extends StatelessWidget {
+  const ErrorText(this.text, {super.key});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.openSans(
+        textStyle: TextStyle(
+          color: AppColors.warning,
+          fontSize: 16,
+          letterSpacing: 0.5,
+        ),
+      ),
+    );
+  }
+}

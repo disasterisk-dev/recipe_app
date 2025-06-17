@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/components/corner_button.dart';
 import 'package:recipe_app/components/text_widgets.dart';
-import 'package:recipe_app/recipe_card.dart';
+import 'package:recipe_app/components/recipe_card.dart';
+import 'package:recipe_app/screens/profile.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -9,7 +10,18 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const TitleText("Recipeat")),
+      appBar: AppBar(
+        title: const TitleText("Recipeat"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (ctx) => const Profile()));
+            },
+            icon: const Icon(Icons.person),
+          )
+        ],
+      ),
       body: Stack(
         children: [
           Container(
